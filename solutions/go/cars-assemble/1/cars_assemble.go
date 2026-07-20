@@ -1,0 +1,10 @@
+package cars
+func CalculateWorkingCarsPerHour(productionRate int, successRate float64) float64 {
+	return float64(productionRate) * (successRate / 100)
+}
+func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int {
+	return int(float64(productionRate/60) * (successRate / 100))
+}
+func CalculateCost(carsCount int) uint {
+	return uint((carsCount/10)*95000 + (carsCount%10)*10000)
+}
